@@ -27,7 +27,7 @@ func main() {
 		// Print a more user-friendly hint alongside the error message
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Run 'nvm help' for a list of available commands.\n")
-		// Exit with code 2 to distinguish usage errors from other failures (code 1)
-		os.Exit(2)
+		// Exit with code 1 for all errors (simpler than distinguishing usage vs runtime errors)
+		os.Exit(1)
 	}
 }
