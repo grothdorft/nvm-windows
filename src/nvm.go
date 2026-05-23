@@ -24,7 +24,9 @@ func main() {
 	// Parse and execute the CLI command
 	app := cli.NewApp(Version, env)
 	if err := app.Run(os.Args); err != nil {
+		// Print a more user-friendly hint alongside the error message
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Run 'nvm --help' for usage information.\n")
 		os.Exit(1)
 	}
 }
