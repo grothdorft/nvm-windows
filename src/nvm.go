@@ -26,7 +26,7 @@ func main() {
 	if err := app.Run(os.Args); err != nil {
 		// Print a more user-friendly hint alongside the error message
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
-		fmt.Fprintf(os.Stderr, "Run 'nvm --help' for usage information.\n")
+		fmt.Fprintf(os.Stderr, "Run 'nvm help' for a list of available commands.\n")
 		os.Exit(1)
 	}
 }
